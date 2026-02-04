@@ -177,14 +177,11 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: ae29675c5f04f5847b9d77d6647a71a2, type: 2}
     - target: {fileID: 5866666021909216657, guid: 492ac15e2082f454ab62afdec26dadeb, type: 3}
       propertyPath: m_WarningMessage
-      value: "\nBinding warning: Some generic clip(s) animate transforms that are
-        already bound by a Humanoid avatar. These transforms can only be changed
-        by Humanoid clips.\n\tTransform 'mixamorig:Hips'\n\tTransform 'mixamorig:LeftFoot'\n\tTransform
-        'mixamorig:LeftHandThumb2'\n\tTransform 'mixamorig:LeftHandIndex1'\n\tTransform
-        'mixamorig:RightHandRing2'\n\tTransform 'mixamorig:Spine1'\n\tTransform 'mixamorig:LeftToeBase'\n\tTransform
-        'mixamorig:LeftHandThumb3'\n\tTransform 'mixamorig:RightArm'\n\tTransform
-        'mixamorig:LeftLeg'\n\tand more ...\n\tFrom animation clip 'Old Man Idle'\n\tFrom
-        animation clip 'Unarmed Walk Forward'"
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 492ac15e2082f454ab62afdec26dadeb, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -363,7 +360,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ThirdPersonCamera
   target: {fileID: 1566654234}
-  cameraPitch: {fileID: 550422620}
   smoothSpeed: 10
   offset: {x: 0, y: 2, z: -5}
 --- !u!4 &1219910742 stripped
@@ -424,7 +420,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1383991803916073487, guid: 19047a98cb084ed4eb617ef5f3e73038, type: 3}
       propertyPath: offset.z
-      value: -5
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 1383991803916073487, guid: 19047a98cb084ed4eb617ef5f3e73038, type: 3}
       propertyPath: m_Enabled
@@ -514,6 +510,10 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 1431494644}
+    - target: {fileID: 3980441251123697788, guid: 19047a98cb084ed4eb617ef5f3e73038, type: 3}
+      propertyPath: playerBase
+      value: 
+      objectReference: {fileID: 1566654234}
     - target: {fileID: 4478188687463407640, guid: 19047a98cb084ed4eb617ef5f3e73038, type: 3}
       propertyPath: m_Name
       value: PlayerBase
