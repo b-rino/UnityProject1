@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1383991803916073487}
   - component: {fileID: 8241131442054326285}
   - component: {fileID: 4799871829476514146}
+  - component: {fileID: 1232505328641096164}
   m_Layer: 0
   m_Name: CameraRoot
   m_TagString: Untagged
@@ -68,6 +69,23 @@ MonoBehaviour:
   minPitch: -40
   maxPitch: 60
 --- !u!114 &4799871829476514146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2043067476180323707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 948c2dc63576a114d9ebcffb4cbdf56c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  cameraTransform: {fileID: 772964202587874754}
+  playerBase: {fileID: 2745589010975087792}
+  sensitivity: 2
+  minPitch: -40
+  maxPitch: 60
+--- !u!114 &1232505328641096164
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -302,7 +320,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2737712304030825239}
-  - component: {fileID: 4951519107439303564}
   - component: {fileID: 3980441251123697788}
   m_Layer: 0
   m_Name: Logic
@@ -326,33 +343,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2745589010975087792}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &4951519107439303564
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6784626976186581731}
-  serializedVersion: 5
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!114 &3980441251123697788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -384,6 +374,7 @@ GameObject:
   - component: {fileID: 4686293153832507635}
   - component: {fileID: 5037093613150370607}
   - component: {fileID: 440450163011813211}
+  - component: {fileID: 7878617638295669483}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -525,6 +516,21 @@ MonoBehaviour:
   smoothSpeed: 10
   offset: {x: 0, y: 2, z: -5}
 --- !u!114 &440450163011813211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8423875607461562729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d56bca3c4dab39d448351a9a5eb96217, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ThirdPersonCamera
+  target: {fileID: 2745589010975087792}
+  smoothSpeed: 10
+  offset: {x: 0, y: 2, z: -5}
+--- !u!114 &7878617638295669483
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
