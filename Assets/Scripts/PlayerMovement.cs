@@ -14,6 +14,8 @@ public class PlayerMovement : MonoBehaviour
 
     private bool isSprinting;
 
+    private bool isDancing = false;
+
     void Start()
     {
         rb = transform.root.GetComponentInChildren<Rigidbody>();
@@ -29,6 +31,13 @@ public class PlayerMovement : MonoBehaviour
 
         // Sprint = bare hurtigere run
         isSprinting = Input.GetKey(KeyCode.LeftShift) && inputDirection.magnitude > 0;
+
+        if (Input.GetKeyDown(KeyCode.Alpha1) && !isDancing)
+{
+    animator.SetTrigger("Dance");
+    isDancing = true;
+}
+
 
         // Animator får kun speed
         animator.SetFloat("speed", rb.linearVelocity.magnitude);
@@ -48,4 +57,10 @@ public class PlayerMovement : MonoBehaviour
 
         rb.linearVelocity = new Vector3(velocity.x, rb.linearVelocity.y, velocity.z);
     }
+
+    public void EndDance()
+{
+    isDancing = false;
+}
+
 }
