@@ -335,7 +335,7 @@ MonoBehaviour:
   cameraRotationPoint: {fileID: 5437323190509217912}
   cameraTransform: {fileID: 772964202587874754}
   playerBase: {fileID: 2745589010975087792}
-  sensitivity: 4
+  sensitivity: 160
   minPitch: -40
   maxPitch: 60
   cameraDistance: 6.5

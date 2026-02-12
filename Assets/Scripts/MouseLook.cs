@@ -19,14 +19,12 @@ public class MouseLook : MonoBehaviour
     void Start()
     {
         layerMask = LayerMask.GetMask("Default");
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
     }
 
     void Update()
     {
-        float mouseX = Input.GetAxis("Mouse X") * sensitivity;
-        float mouseY = Input.GetAxis("Mouse Y") * sensitivity;
+        float mouseX = Input.GetAxis("Mouse X") * sensitivity * Time.deltaTime;;
+        float mouseY = Input.GetAxis("Mouse Y") * sensitivity * Time.deltaTime;;
 
         // Horisontal rotation (PLAYERBASE)
         yaw += mouseX;
